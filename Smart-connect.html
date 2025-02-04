@@ -57,6 +57,8 @@
             // Get the list of items
             const items = document.getElementById('itemList').getElementsByTagName('li');
 
+            console.log('Searching for:', query); // Debug: check input value
+
             // Loop through each item and hide those that don't match the search query
             for (let i = 0; i < items.length; i++) {
                 const item = items[i].textContent.toLowerCase();
@@ -68,5 +70,3 @@
             }
         }
     </script>
-
-</body>
