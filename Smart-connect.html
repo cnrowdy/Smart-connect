@@ -1,54 +1,73 @@
 <head>
     <link href="https://fonts.googleapis.com/css?family=Gluten" rel="stylesheet">
     <style>
-        /* Define the class */
+        /* Define the class for centering the logo */
         .red-text {
             color: #666e60;  /* Sets text color */
             display: flex;
             justify-content: center; /* Center horizontally */
-            align-items: flex-start; /* Align at the top */
+            align-items: center; /* Center vertically */
             height: 100vh; /* Full height of the viewport */
             margin: 0; /* Remove default margin */
             font-family: 'Gluten', sans-serif; /* Use the custom font */
             font-size: 90px;
         }
 
+        /* Center the search box and item list */
+        .center-content {
+            display: flex;
+            flex-direction: column; /* Stack the elements vertically */
+            align-items: center; /* Center horizontally */
+            justify-content: flex-start; /* Start from the top */
+            padding: 20px; /* Add some space around the content */
+        }
+
         #searchInput {
             padding: 10px;
-            width: 200px;
+            width: 250px;
             margin-bottom: 20px;
-            align-items: middle;
+            font-size: 16px;
+            border-radius: 5px;
+            border: 1px solid #ddd;
         }
 
         ul {
             list-style-type: none;
             padding: 0;
+            width: 100%;
+            max-width: 300px; /* Limit the width of the list */
+            text-align: center; /* Center the text of the list */
         }
 
         li {
             padding: 8px;
             margin: 5px 0;
             border: 1px solid #ddd;
+            border-radius: 5px;
         }
     </style>
 </head>
 
 <body style="background-color:#e0ffc9;">
     <p class="red-text">Smart Connect</p>
-    <h2>Item Search</h2>
-    <input type="text" id="searchInput" placeholder="Search for an item..." onkeyup="searchItems()">
-    <ul id="itemList">
-        <li>Apple</li>
-        <li>Banana</li>
-        <li>Carrot</li>
-        <li>Dragonfruit</li>
-        <li>Grapes</li>
-        <li>Kiwi</li>
-        <li>Lemon</li>
-        <li>Mango</li>
-        <li>Orange</li>
-        <li>Pineapple</li>
-    </ul>
+
+    <!-- New container for search box and item list -->
+    <div class="center-content">
+        <h2>Item Search</h2>
+        <input type="text" id="searchInput" placeholder="Search for an item..." onkeyup="searchItems()">
+        <ul id="itemList">
+            <li>Apple</li>
+            <li>Banana</li>
+            <li>Carrot</li>
+            <li>Dragonfruit</li>
+            <li>Grapes</li>
+            <li>Kiwi</li>
+            <li>Lemon</li>
+            <li>Mango</li>
+            <li>Orange</li>
+            <li>Pineapple</li>
+        </ul>
+    </div>
 
     <script>
         function searchItems() {
@@ -71,3 +90,4 @@
             }
         }
     </script>
+</body>
