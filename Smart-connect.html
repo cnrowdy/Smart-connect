@@ -1,66 +1,72 @@
 <head>
-    <link href='https://fonts.googleapis.com/css?family=Gluten' rel='stylesheet'>
+    <link href="https://fonts.googleapis.com/css?family=Gluten" rel="stylesheet">
     <style>
         /* Define the class */
         .red-text {
-            color: #666e60;  /* Makes text red */
+            color: #666e60;  /* Sets text color */
             display: flex;
             justify-content: center; /* Center horizontally */
             align-items: flex-start; /* Align at the top */
             height: 100vh; /* Full height of the viewport */
             margin: 0; /* Remove default margin */
-            font-family: 'Gluten';font-size: 90px;
+            font-family: 'Gluten', sans-serif; /* Use the custom font */
+            font-size: 90px;
         }
+
         #searchInput {
-      padding: 10px;
-      width: 200px;
-      margin-bottom: 20px;
-    }
-    ul {
-      list-style-type: none;
-      padding: 0;
-    }
-    li {
-      padding: 8px;
-      margin: 5px 0;
-      border: 1px solid #ddd;
+            padding: 10px;
+            width: 200px;
+            margin-bottom: 20px;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        li {
+            padding: 8px;
+            margin: 5px 0;
+            border: 1px solid #ddd;
+        }
     </style>
 </head>
+
 <body style="background-color:#e0ffc9;">
-<p class="red-text">Smart Connect</p>
-  <h2>Item Search</h2>
-  <input type="text" id="searchInput" placeholder="Search for an item..." onkeyup="searchItems()">
-  <ul id="itemList">
-    <li>Apple</li>
-    <li>Banana</li>
-    <li>Carrot</li>
-    <li>Dragonfruit</li>
-    <li>Grapes</li>
-    <li>Kiwi</li>
-    <li>Lemon</li>
-    <li>Mango</li>
-    <li>Orange</li>
-    <li>Pineapple</li>
-  </ul>
+    <p class="red-text">Smart Connect</p>
+    <h2>Item Search</h2>
+    <input type="text" id="searchInput" placeholder="Search for an item..." onkeyup="searchItems()">
+    <ul id="itemList">
+        <li>Apple</li>
+        <li>Banana</li>
+        <li>Carrot</li>
+        <li>Dragonfruit</li>
+        <li>Grapes</li>
+        <li>Kiwi</li>
+        <li>Lemon</li>
+        <li>Mango</li>
+        <li>Orange</li>
+        <li>Pineapple</li>
+    </ul>
 
-  <script>
-    function searchItems() {
-      // Get the search input and convert it to lowercase for case-insensitive search
-      const query = document.getElementById('searchInput').value.toLowerCase();
+    <script>
+        function searchItems() {
+            // Get the search input and convert it to lowercase for case-insensitive search
+            const query = document.getElementById('searchInput').value.toLowerCase();
 
-      // Get the list of items
-      const items = document.getElementById('itemList').getElementsByTagName('li');
+            // Get the list of items
+            const items = document.getElementById('itemList').getElementsByTagName('li');
 
-      // Loop through each item and hide those that don't match the search query
-      for (let i = 0; i < items.length; i++) {
-        const item = items[i].textContent.toLowerCase();
-        if (item.includes(query)) {
-          items[i].style.display = 'block'; // Show the item
-        } else {
-          items[i].style.display = 'none'; // Hide the item
+            // Loop through each item and hide those that don't match the search query
+            for (let i = 0; i < items.length; i++) {
+                const item = items[i].textContent.toLowerCase();
+                if (item.includes(query)) {
+                    items[i].style.display = 'block'; // Show the item
+                } else {
+                    items[i].style.display = 'none'; // Hide the item
+                }
+            }
         }
-      }
-    }
-  </script>
+    </script>
 
 </body>
