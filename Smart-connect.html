@@ -1,102 +1,37 @@
-<head>
-    <link href="https://fonts.googleapis.com/css?family=Gluten" rel="stylesheet">
-    <style>
-        /* Define the class for centering the logo */
-        .red-text {
-            color: #666e60;  /* Sets text color */
-            display: flex;
-            justify-content: center; /* Center horizontally */
-            align-items: center; /* Center vertically */
-            height: 100vh; /* Full height of the viewport */
-            margin: 0; /* Remove default margin */
-            font-family: 'Gluten', sans-serif; /* Use the custom font */
-            font-size: 90px;
-        }
+<body>
 
-        /* Center the search box and item list */
-        .center-content {
-            display: flex;
-            flex-direction: column; /* Stack the elements vertically */
-            align-items: center; /* Center horizontally */
-            justify-content: flex-start; /* Start from the top */
-            padding: 35px; /* Add some space around the content */
-        }
+<link href='https://fonts.googleapis.com/css?family=Gluten' rel='stylesheet'>
 
-        #searchInput {
-            padding: 10px;
-            width: 250px;
-            margin-bottom: 20px;
-            font-size: 16px;
-            border-radius: 5px;
-            border: 1px solid #ddd;
-            border-radius: 10px;
-        }
+<style>
+	.minlogo {
+		margin: -5% 0%;
+	}
+	.warning {
+		font-family: 'Gluten';font-size: 20px;
+		margin: -30 10
 
-        ul {
-            list-style-type: none;
-            padding: 10;
-            width: 100%;
-            max-width: 300px; /* Limit the width of the list */
-            text-align: center; /* Center the text of the list */
-        }
+	}
+	.game1 {
+		font-family: 'Gluten';font-size: 50px;
+		background-color: orange;
+		border-radius: 10%;
+		margin: 20% 0%;
+		padding: 35px;
+	}
 
-        li {
-            padding: 8px;
-            margin: 5px 0;
-            border: 5px solid #ddd;
-            border-radius: 10px;
-            background-color: #83f2a0;
-        }
-        .Reg {
-            top: 50%;
-            left: 20%;
-            border-radius: 10%;
-            background-color: #83f2a0;
-        }
-        .rep {
-            top: 35%;
-            left: 20%;
-            border-radius: 10%;
-            background-color: #83f2a0;
-        }
-        
-    </style>
-</head>
+</style>
 
-<body style="background-color:#e0ffc9;">
-    <p class="red-text">Smart Connect</p>
-    <button class="Rep" onclick="location.href='https://docs.google.com/forms/d/e/1FAIpQLScvLZzP2DYr_RCZzdlS8zmA8f0kJrFH4zV2Y3ZPLflrwk-NiQ/viewform?usp=dialog'">Report Number</button>
-    <button class="Reg" onclick="location.href='https://docs.google.com/forms/d/e/1FAIpQLSc_HQpr6YHRIzgfoIJBASvq5IRvIKNJtBXbYZ_GPZdGowbT4w/viewform?usp=dialog'">Register Phone Number</button>
-   
+<img align="top"
+		src=
+"./minlogo.png"
+	alt=" " width="300" height="300"
+	class="minlogo">
 
-    <!-- New container for search box and item list -->
-    <div class="center-content">
-        <h2>Item Search</h2>
-        <input type="text" id="searchInput" placeholder="Search for an item..." onkeyup="searchItems()">
-        <ul id="itemList">
-            <li>12345678 CAN ont</li>
-        </ul>
-    </div>
+	<p class="warning">warning, Minutes! is in beta production and is not pefect.
+		 your selection of games is shown below</p>
 
-    <script>
-        function searchItems() {
-            // Get the search input and convert it to lowercase for case-insensitive search
-            const query = document.getElementById('searchInput').value.toLowerCase();
+	<button onclick="window.location.href='file:///C:/Users/regestered%20user/OneDrive/Desktop/minutes!/game1.html';" class="game1"><b>RAT RACE</b></button>
 
-            // Get the list of items
-            const items = document.getElementById('itemList').getElementsByTagName('li');
 
-            console.log('Searching for:', query); // Debug: check input value
 
-            // Loop through each item and hide those that don't match the search query
-            for (let i = 0; i < items.length; i++) {
-                const item = items[i].textContent.toLowerCase();
-                if (item.includes(query)) {
-                    items[i].style.display = 'block'; // Show the item
-                } else {
-                    items[i].style.display = 'none'; // Hide the item
-                }
-            }
-        }
-    </script>
 </body>
