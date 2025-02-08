@@ -1,2 +1,1 @@
-# Smart-connect
-bruh
+minutes is cool bro
