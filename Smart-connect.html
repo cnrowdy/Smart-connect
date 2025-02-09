@@ -1,77 +1,51 @@
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minutes!</title>
+    <link rel="website icon" type="png" href="minlogo.png">
+    <link href="https://fonts.googleapis.com/css?family=Gluten" rel="stylesheet">
+
+    <style>
+        .minlogo {
+            margin: -5% 0%;
+        }
+        .warning {
+            font-family: 'Gluten';
+            font-size: 28px;
+            margin: -30 10;
+        }
+        .game1, .game2, .game3, .discord {
+            font-family: 'Gluten';
+            background-color: #ffcf69;
+            border-radius: 10%;
+            margin: 20% 0%;
+            padding: 40px;
+            transition: 0.4s ease;
+        }
+        .game1 {
+            font-size: 50px;
+        }
+        .game2, .game3 {
+            font-size: 35px;
+        }
+        .game1:hover, .game2:hover, .game3:hover, .discord:hover {
+            transform: rotate(-10deg);
+        }
+        .discord {
+            font-size: 20px;
+            margin: 5% 70%;
+            padding: 20px; /* Match the padding of other buttons */
+        }
+    </style>
+</head>
 <body>
-<title>Minutes!</title>
-<link rel="website icon" type="png"
-href="minlogo.png">
-<link href='https://fonts.googleapis.com/css?family=Gluten' rel='stylesheet'>
 
-<style>
-	.minlogo {
-		margin: -5% 0%;
-	}
-	.warning {
-		font-family: 'Gluten';font-size: 28px;
-		margin: -30 10
+    <img align="top" src="./minlogo.png" alt=" " width="300" height="300" class="minlogo">
+    <p class="warning">Warning, Minutes! is in beta production and is not perfect. Your selection of games is shown below.</p>
 
-	}
-	.game1 {
-		font-family: 'Gluten';font-size: 50px;
-		background-color: #ffcf69;
-		border-radius: 10%;
-		margin: 20% 0%;
-		padding: 35px;		
-		transition: 0.4s ease;
-	}
-	.game1:hover {
-		transform: rotate(-10deg);
-	}
-	.game2:hover {
-		transform: rotate(-10deg);
-	}
-	.game3:hover {
-		transform: rotate(-10deg);
-	}
-	.game2 {
-		font-family: 'Gluten';font-size: 35px;
-		background-color: #ffcf69;
-		border-radius: 10%;
-		margin: 20% 0%;
-		padding: 40px;
-		font-family: 'Gluten';
-		transition: 0.4s ease;
-	}
-	.game3 {
-		font-family: 'Gluten';font-size: 35px;
-		background-color: #ffcf69;
-		border-radius: 10%;
-		margin: 20% 0%;
-		padding: 40px;
-		font-family: 'Gluten';
-		transition: 0.4s ease;
-	.discord {
-		border-radius: 10%;
-		background-color: #ffcf69;
-		margin: 5% 70%;
-		font-size: 20px;
-	}
-	
-
-</style>
-
-<img align="top"
-		src=
-"./minlogo.png"
-	alt=" " width="300" height="300"
-	class="minlogo">
-
-	<p class="warning">warning, Minutes! is in beta production and is not pefect.
-		 your selection of games is shown below</p>
-
-	<button onclick="window.location.href='https://cnrowdy.github.io/Smart-connect/rat-race.html';" class="game1"><b>RAT RACE</b></button>
-	<button onclick="window.location.href='https://cnrowdy.github.io/Smart-connect/your-address.html';" class="game2"><b>Random Letters</b></button>
-	<button onclick="window.location.href='https://cnrowdy.github.io/Smart-connect/hot-dogs-per-second.html';" class="game3"><b>Hot Dogs</b></button>
-	<button onclick="window.location.href='https://discord.gg/fJnkhsB6RK'" class="discord">Join Discord</button>
-	
-
-
+    <button onclick="window.location.href='https://cnrowdy.github.io/Smart-connect/rat-race.html';" class="game1"><b>RAT RACE</b></button>
+    <button onclick="window.location.href='https://cnrowdy.github.io/Smart-connect/your-address.html';" class="game2"><b>Random Letters</b></button>
+    <button onclick="window.location.href='https://cnrowdy.github.io/Smart-connect/hot-dogs-per-second.html';" class="game3"><b>Hot Dogs</b></button>
+    <button onclick="window.location.href='https://discord.gg/fJnkhsB6RK'" class="discord">Join Discord</button>
 
 </body>
