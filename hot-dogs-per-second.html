@@ -1,13 +1,20 @@
-   <div id="output"></div>
+<div id="output" class="gluten-font"></div>
+<link href="https://fonts.googleapis.com/css?family=Gluten" rel="stylesheet">
 
-    <script>
-        let number = 0; // Start counting from 1
+<style>
+    .gluten-font {
+        font-family: 'Gluten', sans-serif;
+    }
+</style>
 
-        function printNumber() {
-            const outputDiv = document.getElementById("output");
-             outputDiv.innerHTML = number;
-            number += 634.2; // Increase the number by 2
-        }
+<script>
+    let number = 0;
 
-        setInterval(printNumber, 1000); // Call printNumber every 500 milliseconds (0.5 seconds)
-    </script>
+    function printNumber() {
+        const outputDiv = document.getElementById("output");
+        outputDiv.innerHTML = number.toFixed(1);
+        number += 634.2;
+    }
+
+    setInterval(printNumber, 1000);
+</script>
