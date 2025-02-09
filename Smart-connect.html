@@ -1,3 +1,5 @@
+<!DOCTYPE html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -6,46 +8,79 @@
     <link href="https://fonts.googleapis.com/css?family=Gluten" rel="stylesheet">
 
     <style>
-        .minlogo {
-            margin: -5% 0%;
+        /* Ensure the body takes up full height and uses flexbox */
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            min-height: 100vh;
+            margin: 0;
         }
+
+        /* Center the logo */
+        .minlogo {
+            margin-top: 20px;
+            width: 300px;
+            height: 300px;
+        }
+
+        /* Warning text styling */
         .warning {
             font-family: 'Gluten';
             font-size: 28px;
-            margin: -30 10;
+            text-align: center;
+            margin: 20px;
         }
+
+        /* Container for the buttons (using flexbox) */
+        .button-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 15px; /* Space between buttons */
+        }
+
+        /* Button styling */
         .game1, .game2, .game3, .discord {
             font-family: 'Gluten';
             background-color: #ffcf69;
             border-radius: 10%;
-            margin: -20% 0%;
             padding: 40px;
-            transition: 0.4s ease;
-        }
-        .game1 {
-            font-size: 50px;
-        }
-        .game2, .game3 {
+            width: 70%; /* Set width to 70% of the container */
+            text-align: center;
             font-size: 35px;
+            transition: 0.4s ease;
+            display: block;
         }
+
+        .game1 {
+            font-size: 50px; /* Larger font size for game1 */
+        }
+
+        /* Hover effect */
         .game1:hover, .game2:hover, .game3:hover, .discord:hover {
             transform: rotate(-10deg);
         }
+
         .discord {
-            font-size: 20px;
-            margin: 70% 5%;
-            padding: 20px; /* Match the padding of other buttons */
+            font-size: 20px; /* Smaller font size for Discord button */
+            width: 50%; /* Make the Discord button smaller */
         }
     </style>
 </head>
 <body>
 
-    <img align="top" src="./minlogo.png" alt=" " width="300" height="300" class="minlogo">
+    <img src="./minlogo.png" alt=" " class="minlogo">
     <p class="warning">Warning, Minutes! is in beta production and is not perfect. Your selection of games is shown below.</p>
 
-    <button onclick="window.location.href='https://cnrowdy.github.io/Smart-connect/rat-race.html';" class="game1"><b>RAT RACE</b></button>
-    <button onclick="window.location.href='https://cnrowdy.github.io/Smart-connect/your-address.html';" class="game2"><b>Random Letters</b></button>
-    <button onclick="window.location.href='https://cnrowdy.github.io/Smart-connect/hot-dogs-per-second.html';" class="game3"><b>Hot Dogs</b></button>
-    <button onclick="window.location.href='https://discord.gg/fJnkhsB6RK'" class="discord">Join Discord</button>
+    <!-- Wrapper for the buttons -->
+    <div class="button-container">
+        <button onclick="window.location.href='https://cnrowdy.github.io/Smart-connect/rat-race.html';" class="game1"><b>RAT RACE</b></button>
+        <button onclick="window.location.href='https://cnrowdy.github.io/Smart-connect/your-address.html';" class="game2"><b>Random Letters</b></button>
+        <button onclick="window.location.href='https://cnrowdy.github.io/Smart-connect/hot-dogs-per-second.html';" class="game3"><b>Hot Dogs</b></button>
+        <button onclick="window.location.href='https://discord.gg/fJnkhsB6RK'" class="discord">Join Discord</button>
+    </div>
 
 </body>
+</html>
