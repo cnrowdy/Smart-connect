@@ -1,0 +1,13 @@
+   <div id="output"></div>
+
+    <script>
+        let number = 1; // Start counting from 1
+
+        function printNumber() {
+            const outputDiv = document.getElementById("output");
+            outputDiv.innerHTML += number + "<br>"; // Display the current number
+            number += 2; // Increase the number by 2
+        }
+
+        setInterval(printNumber, 500); // Call printNumber every 500 milliseconds (0.5 seconds)
+    </script>
