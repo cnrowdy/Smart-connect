@@ -13,18 +13,16 @@
       overflow-x: hidden; /* Hide horizontal overflow */
       overflow-y: hidden; /* Hide vertical overflow */
       display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-direction: column;
-    }
-
-    .youtube:hover, .discord:hover {
-      cursor: pointer;
+      flex-direction: column; /* Stack elements vertically */
+      justify-content: center; /* Center content vertically */
+      align-items: center; /* Center content horizontally */
     }
 
     .logo {
-      display: block;
-      margin: 0 auto; /* Center the logo */
+      position: absolute; /* Position logo at the top */
+      top: 20px; /* Adjust as needed */
+      left: 50%;
+      transform: translateX(-50%); /* Center horizontally */
       max-width: 100%;
     }
 
@@ -42,7 +40,7 @@
       position: absolute;
       top: 50%;
       left: 50%;
-      transform: translate(-50%, -50%); /* Center the button */
+      transform: translate(-50%, -50%); /* Center the Discord button */
       height: 500px;
       width: 300px;
     }
@@ -90,3 +88,4 @@
 <button class="cnr">made by CNRdestroyer</button>
 
 <!-- CNRdestroyer is the G.O.A.T -->
+
