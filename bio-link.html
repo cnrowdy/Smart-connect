@@ -34,5 +34,44 @@ body {
 <img src="./bcbcf5f96b7a2e71cf6200133e4a2193.png" alt="expires" class="logo">
 <!--<button class="youtube"><img src="yt.png"></button>-->
 <!--<button class="discord"><img src="9738-discord-ico.png"></button>-->
-<button class="discord"><img src="
-9738-discord-ico.png">discord</button>
+<button class="discord"><img src="9738-discord-ico.png"><button>
+
+<style>
+  .container {
+      position: relative;
+      display: inline-block;
+    }
+
+    .main-button {
+      padding: 10px 20px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      font-size: 16px;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+
+    .slide-button {
+      position: absolute;
+      bottom: -50px; /* Initially hidden below the main button */
+      right: 0;
+      padding: 10px 20px;
+      background-color: #008CBA;
+      color: white;
+      border: none;
+      font-size: 16px;
+      cursor: pointer;
+      border-radius: 5px;
+      transition: transform 0.3s ease; /* Sliding transition */
+    }
+
+    .container:hover .slide-button {
+      transform: translateY(50px); /* Slides the button into view from the bottom */
+    }
+  </style>
+
+<div class="container">
+  <button class="main-button">Main Button</button>
+  <button class="slide-button">Slide Button</button>
+</div>
