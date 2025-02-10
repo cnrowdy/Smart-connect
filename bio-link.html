@@ -1,33 +1,16 @@
-<!DOCTYPE html>
-<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sliding Button Effect</title>
   <style>
-    /* Body and background color */
-    body {
-      background-color: #571c1e;
-      margin: 0;
-      padding: 0;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-    }
+body {
+  background-color: #571c1e;
+  }
 
-    /* Hover effect for buttons */
-    .youtube:hover, .discord:hover {
-      transform: rotate(15deg); /* Rotate on hover */
-    }
-
-    /* Logo styling */
-    .logo {
-      margin: 0 0 20px 0; /* Space between logo and button */
-    }
-
-    /* Discord button styling */
-    .discord {
+.youtube:hover, .discord:hover {
+  transform: rotate(15deg);
+}
+.logo {
+  margin: 0% 40%;
+}
+  .discord {
       display: inline-flex;
       align-items: center;
       justify-content: center;
@@ -38,66 +21,17 @@
       cursor: pointer;
       font-size: 35px;
       color: white;
-      margin-bottom: 30px; /* Space between Discord button and the next section */
-    }
-
-    .discord img {
-      margin-right: 10px;
-      height: 42px;
-      width: 42px;
-    }
-
-    /* Container for sliding button effect */
-    .container {
-      position: relative;
-      display: inline-block;
-    }
-
-    .main-button {
-      padding: 10px 20px;
-      background-color: #4CAF50;
-      color: white;
-      border: none;
-      font-size: 16px;
-      cursor: pointer;
-      border-radius: 5px;
-      position: relative;
-      z-index: 1; /* Ensure main button is above the sliding button */
-    }
-
-    .slide-button {
-      position: absolute;
-      bottom: -100%; /* Start off-screen below the main button */
-      left: 0;
-      width: 100%; /* Cover the full width of the main button */
-      padding: 10px 20px;
-      background-color: #008CBA;
-      color: white;
-      border: none;
-      font-size: 16px;
-      cursor: pointer;
-      border-radius: 5px;
-      transition: transform 0.3s ease, bottom 0.3s ease; /* Slide in effect */
-    }
-
-    .container:hover .slide-button {
-      bottom: 0; /* Slide the button into place */
-    }
+      margin: 10% 45%;
+  }
+  .discord img {
+    margin-right: 10px;
+    height: 42px;
+    width: 42px
+  }
+    
   </style>
 </head>
-<body>
-
-  <!-- Logo -->
-  <img src="./bcbcf5f96b7a2e71cf6200133e4a2193.png" alt="expires" class="logo">
-
-  <!-- Discord button -->
-  <button class="discord"><img src="9738-discord-ico.png" alt="Discord">Discord</button>
-
-  <!-- Main button and sliding button container -->
-  <div class="container">
-    <button class="main-button">Main Button</button>
-    <button class="slide-button">Slide Button</button>
-  </div>
-
-</body>
-</html>
+<img src="./bcbcf5f96b7a2e71cf6200133e4a2193.png" alt="expires" class="logo">
+<!--<button class="youtube"><img src="yt.png"></button>-->
+<!--<button class="discord"><img src="9738-discord-ico.png"></button>-->
+<button class="discord"><img src="9738-discord-ico.png">Discord</button>
