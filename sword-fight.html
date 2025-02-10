@@ -1,1 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Countdown Timer</title>
+    <script>
+        let countdown = 30;
+        let button1Pressed = false;
+        let button2Pressed = false;
+        let interval;
 
+        function startCountdown() {
+            interval = setInterval(function() {
+                if (countdown > 0 && !button1Pressed && !button2Pressed) {
+                    countdown--;
+                    document.getElementById('timer').innerText = countdown;
+                } else {
+                    clearInterval(interval); // Stop the countdown if buttons are pressed or countdown finishes
+                }
+            }, 1000); // Update the countdown every 1 second
+        }
+
+        function button1Action() {
+            button1Pressed = true;
+            alert('Button 1 pressed');
+            checkIfCountdownShouldStop();
+        }
+
+        function button2Action() {
+            button2Pressed = true;
+            alert('Button 2 pressed');
+            checkIfCountdownShouldStop();
+        }
+
+        function checkIfCountdownShouldStop() {
+            if (button1Pressed && button2Pressed) {
+                clearInterval(interval);
+                document.getElementById('timer').innerText = "Countdown stopped!";
+            }
+        }
+
+        window.onload = startCountdown; // Start the countdown when the page loads
+    </script>
+</head>
+<body>
+    <h1>Countdown Timer</h1>
+    <p>Time remaining: <span id="timer">30</span> seconds</p>
+    <button onclick="button1Action()">Press Button 1</button>
+    <button onclick="button2Action()">Press Button 2</button>
+</body>
+</html>
