@@ -3,11 +3,17 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Button with Hover Effect</title>
+  <title>Sliding Button Effect</title>
   <style>
     /* Body and background color */
     body {
       background-color: #571c1e;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
     }
 
     /* Hover effect for buttons */
@@ -17,7 +23,7 @@
 
     /* Logo styling */
     .logo {
-      margin: 0% 40%;
+      margin: 0 0 20px 0; /* Space between logo and button */
     }
 
     /* Discord button styling */
@@ -32,7 +38,7 @@
       cursor: pointer;
       font-size: 35px;
       color: white;
-      margin: 10% 45%;
+      margin-bottom: 30px; /* Space between Discord button and the next section */
     }
 
     .discord img {
@@ -45,8 +51,6 @@
     .container {
       position: relative;
       display: inline-block;
-      margin-top: 20px; /* Space for the container */
-      text-align: center;
     }
 
     .main-button {
@@ -57,12 +61,15 @@
       font-size: 16px;
       cursor: pointer;
       border-radius: 5px;
+      position: relative;
+      z-index: 1; /* Ensure main button is above the sliding button */
     }
 
     .slide-button {
       position: absolute;
-      bottom: -50px; /* Initially hidden below the main button */
-      right: 0;
+      bottom: -100%; /* Start off-screen below the main button */
+      left: 0;
+      width: 100%; /* Cover the full width of the main button */
       padding: 10px 20px;
       background-color: #008CBA;
       color: white;
@@ -70,11 +77,11 @@
       font-size: 16px;
       cursor: pointer;
       border-radius: 5px;
-      transition: transform 0.3s ease; /* Sliding transition */
+      transition: transform 0.3s ease, bottom 0.3s ease; /* Slide in effect */
     }
 
     .container:hover .slide-button {
-      transform: translateY(50px); /* Slides the button into view from the bottom */
+      bottom: 0; /* Slide the button into place */
     }
   </style>
 </head>
