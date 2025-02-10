@@ -1,52 +1,39 @@
-<!DOCTYPE html>
-<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Countdown Timer</title>
-    <script>
-        let countdown = 30;
-        let button1Pressed = false;
-        let button2Pressed = false;
-        let interval;
-
-        function startCountdown() {
-            interval = setInterval(function() {
-                if (countdown > 0 && !button1Pressed && !button2Pressed) {
-                    countdown--;
-                    document.getElementById('timer').innerText = countdown;
-                } else {
-                    clearInterval(interval); // Stop the countdown if buttons are pressed or countdown finishes
-                }
-            }, 1000); // Update the countdown every 1 second
+    <title>Circle Canvas</title>
+    <style>
+        canvas {
+            border: 1px solid black;
+            background-color: black; /* Canvas background to see the white circles clearly */
         }
-
-        function button1Action() {
-            button1Pressed = true;
-            alert('Button 1 pressed');
-            checkIfCountdownShouldStop();
-        }
-
-        function button2Action() {
-            button2Pressed = true;
-            alert('Button 2 pressed');
-            checkIfCountdownShouldStop();
-        }
-
-        function checkIfCountdownShouldStop() {
-            if (button1Pressed && button2Pressed) {
-                clearInterval(interval);
-                document.getElementById('timer').innerText = "Countdown stopped!";
-            }
-        }
-
-        window.onload = startCountdown; // Start the countdown when the page loads
-    </script>
+    </style>
 </head>
 <body>
-    <h1>Countdown Timer</h1>
-    <p>Time remaining: <span id="timer">30</span> seconds</p>
-    <button onclick="button1Action()">Press Button 1</button>
-    <button onclick="button2Action()">Press Button 2</button>
+    <canvas id="myCanvas" width="600" height="400"></canvas>
+
+    <script>
+        // Get the canvas element and its context
+        const canvas = document.getElementById("myCanvas");
+        const ctx = canvas.getContext("2d");
+
+        // Set the circle color to white
+        ctx.fillStyle = "white";
+
+        // Function to draw circles
+        function drawCircle(x, y, radius) {
+            ctx.beginPath();
+            ctx.arc(x, y, radius, 0, Math.PI * 2);
+            ctx.fill();
+        }
+
+        // Event listener to add circles on click
+        canvas.addEventListener("click", function(event) {
+            const x = event.offsetX;
+            const y = event.offsetY;
+            const radius = 20; // Fixed radius for all circles
+
+            drawCircle(x, y, radius);
+        });
+    </script>
 </body>
-</html>
