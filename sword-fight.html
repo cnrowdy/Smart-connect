@@ -3,15 +3,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Circle Canvas</title>
     <style>
+        body {
+            overflow-x: hidden;
+            overflow-y: hidden;
+        }
         canvas {
             border: 1px solid white;
             background-color: #fff533; /* Canvas background to see the white circles clearly */
-            position:
+            position: absolute; /* Position logo at the top */
+            top: 20px; /* Adjust as needed */
+            left: 50%;
         }
     </style>
 </head>
 <body>
-    <canvas id="myCanvas" width="600" height="400"></canvas>
+    <canvas id="myCanvas" width="280" height="280"></canvas>
 
     <script>
         // Get the canvas element and its context
