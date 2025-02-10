@@ -1,16 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
 <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Button with Hover Effect</title>
   <style>
-body {
-  background-color: #571c1e;
-  }
+    /* Body and background color */
+    body {
+      background-color: #571c1e;
+    }
 
-.youtube:hover, .discord:hover {
-  transform: rotate(15deg);
-}
-.logo {
-  margin: 0% 40%;
-}
-  .discord {
+    /* Hover effect for buttons */
+    .youtube:hover, .discord:hover {
+      transform: rotate(15deg); /* Rotate on hover */
+    }
+
+    /* Logo styling */
+    .logo {
+      margin: 0% 40%;
+    }
+
+    /* Discord button styling */
+    .discord {
       display: inline-flex;
       align-items: center;
       justify-content: center;
@@ -22,24 +33,20 @@ body {
       font-size: 35px;
       color: white;
       margin: 10% 45%;
-  }
-  .discord img {
-    margin-right: 10px;
-    height: 42px;
-    width: 42px
-  }
-    
-  </style>
-</head>
-<img src="./bcbcf5f96b7a2e71cf6200133e4a2193.png" alt="expires" class="logo">
-<!--<button class="youtube"><img src="yt.png"></button>-->
-<!--<button class="discord"><img src="9738-discord-ico.png"></button>-->
-<button class="discord"><img src="9738-discord-ico.png">Discord</button>
+    }
 
-<style>
-  .container {
+    .discord img {
+      margin-right: 10px;
+      height: 42px;
+      width: 42px;
+    }
+
+    /* Container for sliding button effect */
+    .container {
       position: relative;
       display: inline-block;
+      margin-top: 20px; /* Space for the container */
+      text-align: center;
     }
 
     .main-button {
@@ -70,8 +77,20 @@ body {
       transform: translateY(50px); /* Slides the button into view from the bottom */
     }
   </style>
+</head>
+<body>
 
-<div class="container">
-  <button class="main-button">Main Button</button>
-  <button class="slide-button">Slide Button</button>
-</div>
+  <!-- Logo -->
+  <img src="./bcbcf5f96b7a2e71cf6200133e4a2193.png" alt="expires" class="logo">
+
+  <!-- Discord button -->
+  <button class="discord"><img src="9738-discord-ico.png" alt="Discord">Discord</button>
+
+  <!-- Main button and sliding button container -->
+  <div class="container">
+    <button class="main-button">Main Button</button>
+    <button class="slide-button">Slide Button</button>
+  </div>
+
+</body>
+</html>
