@@ -1,1 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>True or False Quiz</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            padding: 20px;
+        }
 
+        .quiz-container {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 300px;
+            margin: 0 auto;
+        }
+
+        h2 {
+            text-align: center;
+        }
+
+        .question {
+            margin-bottom: 15px;
+        }
+
+        .question label {
+            display: block;
+            font-size: 16px;
+        }
+
+        .question input {
+            margin-right: 10px;
+        }
+
+        .result {
+            margin-top: 20px;
+            font-size: 18px;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        button {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="quiz-container">
+        <h2>True or False Quiz</h2>
+
+        <div class="question">
+            <label>1. The Earth is flat</label>
+            <input type="radio" name="q1" value="true"> True
+            <input type="radio" name="q1" value="false"> False
+        </div>
+
+        <div class="question">
+            <label>2. The sun rises in the east</label>
+            <input type="radio" name="q2" value="true"> True
+            <input type="radio" name="q2" value="false"> False
+        </div>
+
+        <button onclick="submitQuiz()">Submit</button>
+
+        <div class="result" id="result"></div>
+    </div>
+
+    <script>
+        function submitQuiz() {
+            // Define the correct answers
+            var answers = {
+                q1: 'false',
+                q2: 'true'
+            };
+
+            var score = 0;
+
+            // Check answers
+            for (var question in answers) {
+                var selectedAnswer = document.querySelector('input[name="' + question + '"]:checked');
+                
+                if (selectedAnswer && selectedAnswer.value === answers[question]) {
+                    score++;
+                }
+            }
+
+            // Calculate percentage
+            var percentage = (score / 2) * 100;
+
+            // Show result
+            document.getElementById('result').innerHTML = "You scored " + score + " out of 2 (" + percentage.toFixed(2) + "%)";
+        }
+    </script>
+
+</body>
+</html>
