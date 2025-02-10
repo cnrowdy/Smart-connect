@@ -1,26 +1,34 @@
-<!-- CNRdestroyer is the G.O.A.T-->
+<!-- CNRdestroyer is the G.O.A.T -->
 <link href="https://fonts.googleapis.com/css?family=Gluten" rel="stylesheet">
+
 <head>
-<!-- CNRdestroyer is the G.O.A.T-->
   <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      background-image: url('2025_02_10_0p2_Kleki.png');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      overflow-x: hidden; /* Hide horizontal overflow */
+      overflow-y: hidden; /* Hide vertical overflow */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+    }
 
-body {
-   margin: 0;
-  height: 100vh;
-  background-image: url('2025_02_10_0p2_Kleki.png');
-  background-size: cover; 
-  background-position: center;
-  background-repeat: no-repeat;
-  overflow-x: hidden
-  overflow-y: hidden
-  }
+    .youtube:hover, .discord:hover {
+      cursor: pointer;
+    }
 
-.youtube:hover, .discord:hover {
-}
-.logo {
-  margin: 0% 40%;
-}
-  .discord {
+    .logo {
+      display: block;
+      margin: 0 auto; /* Center the logo */
+      max-width: 100%;
+    }
+
+    .discord {
       display: inline-flex;
       align-items: center;
       justify-content: center;
@@ -31,47 +39,54 @@ body {
       cursor: pointer;
       font-size: 35px;
       color: white;
-      margin: 0% 45%;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%); /* Center the button */
       height: 500px;
       width: 300px;
-  }
-  .d-info {
-    ocpacity: 0;
-    visibility: hidden;
-    transition: opacity 1s ease, visibility 1s ease; /* Smooth transition */
-    background-color: #592325;
-    border: 2px solid #5c5c5c;
-    border-radius: 8px;
-    margin: -10% 45%;
-    font-size: 30px;
-    white-space: nowrap;
-  }
-  .discord:hover + .d-info {
-    ocpacity: 1;
-    visibility: visible;
-  }
-  .discord img {
-    margin-right: 10px;
-    height: 42px;
-    width: 42px
-  }
-  .cnr {
-    font-family: 'Gluten';
-    font-size: 30px;
-    position: fixed;
-  top: 20px;
-  right: 20px;
-    background-color: transparent;
-    border: none;
-    box-shadow: none;
-  }    
+    }
+
+    .d-info {
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity 1s ease, visibility 1s ease; /* Smooth transition */
+      background-color: #592325;
+      border: 2px solid #5c5c5c;
+      border-radius: 8px;
+      margin: -10% 45%;
+      font-size: 30px;
+      white-space: nowrap;
+    }
+
+    .discord:hover + .d-info {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    .discord img {
+      margin-right: 10px;
+      height: 42px;
+      width: 42px;
+    }
+
+    .cnr {
+      font-family: 'Gluten';
+      font-size: 30px;
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      background-color: transparent;
+      border: none;
+      box-shadow: none;
+    }
   </style>
 </head>
-<!-- CNRdestroyer is the G.O.A.T-->
+
+<!-- CNRdestroyer is the G.O.A.T -->
 <img src="./bcbcf5f96b7a2e71cf6200133e4a2193.png" alt="expires" class="logo">
-<!--<button class="youtube"><img src="yt.png"></button>-->
-<!--<button class="discord"><img src="9738-discord-ico.png"></button>-->
 <button class="discord"><img src="9738-discord-ico.png">Discord</button>
 <button class="d-info"><b>Discord Info: jeff1999</b></button>
 <button class="cnr">made by CNRdestroyer</button>
-<!-- CNRdestroyer is the G.O.A.T-->
+
+<!-- CNRdestroyer is the G.O.A.T -->
