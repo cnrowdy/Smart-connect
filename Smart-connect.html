@@ -11,6 +11,7 @@
             margin: 0;
             padding: 0;
             position: relative; /* Needed for absolute positioning of the Discord button */
+            background-color: rgb(255, 205, 158);
         }
 
         /* Logo styling */
@@ -19,8 +20,6 @@
             display: block;
             margin-left: auto;
             margin-right: auto;
-            width: 300px;
-            height: 300px;
         }
 
         /* Warning text styling */
@@ -57,7 +56,7 @@
         }
 
         /* Hover effect */
-        .game1:hover, .game2:hover, .game3:hover {
+        button:hover {
             transform: rotate(-10deg);
         }
 
@@ -70,7 +69,19 @@
             padding: 15px;
             position: absolute;
             top: 10px;
+            right: 150px;
+            transition: 0.4s ease;
+        }
+        .yt {
+            font-family: 'Gluten';
+            background-color: #ffcf69;
+            border-radius: 10%;
+            font-size: 20px;
+            padding: 15px;
+            position: absolute;
+            top: 10px;
             right: 10px;
+            transition: 0.4s ease;
         }
 
     </style>
@@ -78,10 +89,12 @@
 <body>
 
     <!-- Logo -->
-    <img src="./assets/minlogo.png" alt="Logo" class="minlogo">
+     <br><br><br>
+    <img src="./assets/minlogo2.png" alt="Logo" class="minlogo">
+    <br><br><br>
 
     <!-- Warning text -->
-    <p class="warning">Warning, Minutes! is in beta production and is not perfect. Your selection of games is shown below.</p>
+    <p class="warning">⚠️Warning, minutes! is in beta production and is not perfect. Your selection of games is shown below.⚠️</p>
 
     <!-- Container for the game buttons -->
     <div class="buttons-container">
@@ -91,6 +104,9 @@
     </div>
 
     <!-- Discord button at the top-right -->
-    <button onclick="window.location.href='https://discord.gg/fJnkhsB6RK'" class="discord">Join Discord</button>
+    <button onclick="window.location.href='https://discord.gg/fJnkhsB6RK'" class="discord">
+    <image src="./assets/discord2.png"></image></button>
+    <button onclick="window.location.href='https://discord.gg/fJnkhsB6RK'" class="yt">
+    <image src="./assets/yt.png"></image></button>
 
 </body>
