@@ -1,54 +1,82 @@
 <head>
-
-<link href='https://fonts.googleapis.com/css?family=Gluten' rel='stylesheet'>
+  <link href="https://fonts.googleapis.com/css?family=Gluten" rel="stylesheet">
+  <title>minutes!</title>
+  <link rel="icon" type="png" href="./assets//minlogo.png">
+  <style>
+    body {
+      background-color: rgb(255, 205, 158);
+    }
+    .mainDiv {
+    text-align: center;
+    position: absolute;
+    top: 10px; /* Adjust top spacing */
+    left: 50%;
+    transform: translateX(-50%);
+    }
+    h1 {
+      font-family: 'Gluten';
+      color: rgb(167, 108, 0);
+    }
+  .discord {
+      position: absolute;
+      top: 20px;
+      right: 10px;
+      background-color: transparent;
+      border: 0;
+  }
+  .explore {
+      font-family: 'Gluten';
+      background-color: #ffcf69;
+      border-radius: 10%;
+      padding: 20px;
+      font-size: 35px;
+      text-align: center;
+      transition: 0.4s ease;
+      width: 200px; /* Set a fixed width for consistency */
+      display: inline-block;
+      border: 1 solid black;
+      border-width: 5;
+      scale: 1.5;
+      border: 2px solid black; /* Makes the border fully black */
+      border-radius: 15px; /* Keeps the rounded edges if needed */
+      box-shadow: none; /* Removes any shadow that might cause color mixing */
+  }
+  .explore:hover {
+    transform: rotate(-10deg);
+  }
+  </style>
 </head>
+
 <body>
-<style>
-.title {
-  font-family: 'Gluten';
-  font-size: 250px;
-  margin: ;
-  color: #d9ac32;
-  text-align: center;
-}
-.h4 {
-  font-family: 'Gluten';
-  font-size: 32px;
-  text-align: center;
-  color: black;
-  margin: -15%;
-}
-.start {
-            font-family: 'Gluten', sans-serif;
-            font-size: 75px;
-            cursor: pointer;
-            border-radius: 3px;
-            transition: width 0.3s ease, height 0.3s ease, border-radius 0.3s ease, font-size 0.3s ease;
-            margin: 40% 42%;
-            border: none;
-            box-shadow: none;
-            text-align: center;
-            padding: 10px;
-            background-color: #d9ac32;
-        }
-
-        .start:hover {
-            border-radius: 10px;
-            margin: 40% 42%;
-            background-color: #d9ac32; /* Keep same background */
-        }
-        .aud {
-          margin: 0% 0%;
-        }
-  
-  
-</style>
-<p class="title">Minutes!</p>
-<p class="h4">official Minutes! studios NY</p>
-<button onclick="window.location.href='https://cnrowdy.github.io/Smart-connect/Smart-connect.html';" class="start">Explore</button>
-<audio controls autoplay class="aud">
-  <source src="Rand (1).mp3" type="audio/mpeg">
-
+  <div class="stuff">
+    <button class="discord" id="discord" >
+      <img src="./assets/discord2.png">
+    </button>
+  </div>
+  <div class="mainDiv">
+    <br>
+    <img src="./assets/minlogo2.png">
+    <h1>minutes! Studios</h1>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <button class="explore" id="explore">Explore!</button>
+    <br>
+  </div>
+  <audio autoplay loop id="music">
+    <source src="./Rand (1).mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
 </audio>
+  <script>
+    document.getElementById("discord").onclick = function(){
+      window.location.href = "https://discord.gg/fJnkhsB6RK";
+    }
+    document.getElementById("explore").onclick = function(){
+      window.location.href = "./Smart-connect.html";
+    }
+    document.getElementById("music").volume = 0.05;
+  </script>
 </body>
-
