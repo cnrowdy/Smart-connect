@@ -1,6 +1,7 @@
 <head>
     <link href="https://fonts.googleapis.com/css?family=Gluten" rel="stylesheet">
     <link rel="icon" type="png" href="./assets/minlogo.png">
+    <title>Rock, Paper, Scissors!</title>
     <style>
         body {
             justify-content: center;
@@ -46,9 +47,19 @@
         <input placeholder="Type 'Rock', 'Paper', or 'Scissors'" id="rpsField"></input>
         <br><br><br><br>
         <button class="play" id="rpsPlay">Play</button>
+        <br><br><br>
+        <h1 id="score">Score: 0<br>🏆Best: 0</h1>
     </body>
     <script>
         const rpsField = document.getElementById("rpsField");
+        let curScore = 0;
+        let best = 0;
+        if (document.cookie == "" || document.cookie == null) {
+            document.cookie = "0";
+        } else {
+            best = parseInt(document.cookie);
+        }
+        document.getElementById("score").innerHTML = "Score: "+curScore+"<br>🏆Best: "+best;
         document.getElementById("rpsPlay").onclick = function(){
             const rpsPick = Math.round(Math.random()*10);
             let pick = "";
@@ -70,7 +81,34 @@
                          document.getElementById("eea").innerHTML = "You lose!";
                     if (pick == "🪨")
                          document.getElementById("eea").innerHTML = "You tied!";
+                    break;
+                case "scissors":
+                    if (pick == "✂️")
+                         document.getElementById("eea").innerHTML = "You tied!";
+                    if (pick == "📃")
+                         document.getElementById("eea").innerHTML = "You win!";
+                    if (pick == "🪨")
+                         document.getElementById("eea").innerHTML = "You lose!";
+                    break;
+                case "paper":
+                    if (pick == "✂️")
+                         document.getElementById("eea").innerHTML = "You lost!";
+                    if (pick == "📃")
+                         document.getElementById("eea").innerHTML = "You tied!";
+                    if (pick == "🪨")
+                         document.getElementById("eea").innerHTML = "You win!";
+                    break;
             }
+            if (document.getElementById("eea").innerHTML == "You win!")
+                curScore++;
+            else if (document.getElementById("eea").innerHTML != "You tied!")
+            {
+                if (curScore > best)
+                    best = curScore;
+                document.cookie = best.toString();
+                curScore = 0;
+            }
+            document.getElementById("score").innerHTML = "Score: "+curScore+"<br>🏆Best: "+best;
         }
     </script>
 </head>
