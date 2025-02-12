@@ -1,0 +1,76 @@
+<head>
+    <link href="https://fonts.googleapis.com/css?family=Gluten" rel="stylesheet">
+    <link rel="icon" type="png" href="./assets/minlogo.png">
+    <style>
+        body {
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            background-color: rgb(255, 205, 158);
+        }
+        h1 {
+            font-family: 'Gluten';
+            text-align: center;
+            font-size: 50px;
+        }
+        .rps {
+            text-align: center;
+            font-size: 50px;
+            background-color: rgb(253, 177, 106);
+            color: rgb(107, 70, 0);
+        }
+        input {
+            margin: auto;
+            width: 250px;
+            justify-content: center;
+            font-family: 'Gluten';
+            text-align: center;
+            border-radius: 15px;
+            scale: 2;
+        }
+        .play {
+            font-family: 'Gluten';
+            scale: 2;
+        }
+    </style>
+    <body>
+        <br>
+        <h1 id="eea">Rock, Paper, Scissors!</h1>
+        <br><br>
+        <h2 class="rps" id="rps">------------------------------------------------------------------------------------------------------------
+            <br>❔❔❔
+            <br>------------------------------------------------------------------------------------------------------------
+        </h2>
+        <br><br>
+        <h1>You Choose:</h1>
+        <input placeholder="Type 'Rock', 'Paper', or 'Scissors'" id="rpsField"></input>
+        <br><br><br><br>
+        <button class="play" id="rpsPlay">Play</button>
+    </body>
+    <script>
+        const rpsField = document.getElementById("rpsField");
+        document.getElementById("rpsPlay").onclick = function(){
+            const rpsPick = Math.round(Math.random()*10);
+            let pick = "";
+            console.log(rpsField % 2 == 0);
+            if (rpsPick == 1 || rpsPick == 2 || rpsPick == 3) {
+                pick = "🪨";
+            } else if (rpsPick % 2 == 0) {
+                pick = "📃";
+            } else {
+                pick = "✂️";
+            }
+            console.log(pick);
+            document.getElementById("rps").innerHTML = "------------------------------------------------------------------------------------------------------------<br>"+pick+"<br>------------------------------------------------------------------------------------------------------------"
+            switch (rpsField.value.toLowerCase()) {
+                case "rock":
+                    if (pick == "✂️")
+                         document.getElementById("eea").innerHTML = "You win!";
+                    if (pick == "📃")
+                         document.getElementById("eea").innerHTML = "You lose!";
+                    if (pick == "🪨")
+                         document.getElementById("eea").innerHTML = "You tied!";
+            }
+        }
+    </script>
+</head>
