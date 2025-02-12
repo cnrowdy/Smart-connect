@@ -33,12 +33,16 @@ body {
     .back:hover {
         transform: rotate(-10deg);
     }
+    .per-second {
+        position: absolute;
+        left: 50%
+    }
 </style>
 
 <p class="hotdogs">Hot Dogs 🌭 are a major part of American culture and many are consumed each year; around 20 billion. yeah thats alot, around 634 Hot Dogs are consumed per second on the USA. 🌭🌭🌭 <p>
 <button onclick="window.location.href='https://cnrowdy.github.io/Smart-connect/Smart-connect.html';" class="back">back</button>
 
-<script>
+<script class="per-second">
     let number = 0;
 
     function printNumber() {
