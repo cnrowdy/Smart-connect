@@ -1,4 +1,34 @@
 <body>
+  <script>
+        function goToRandomWebsite() {
+            // List of random websites
+            var websites = [
+                "https://www.google.com",
+                "https://www.wikipedia.org",
+                "https://www.reddit.com",
+                "https://www.youtube.com",
+                "https://www.github.com"
+                "https://www.neal.fun"
+                "https://www.discord.com"
+                "https://uiverse.io/r7chardgh/ancient-starfish-5"
+                "https://www.youtube.com/watch?v=iDU9Ycmjxk8"
+                "https://cnrowdy.github.io/Smart-connect/Smart-connect.html"
+                "https://www.paypal.com/us/webapps/mpp/spotify-premium-offer"
+                "https://medal.tv"
+                "https://store.epicgames.com/en-US/"
+                "https://www.google.com/maps"
+                "https://www.google.com/maps"
+                "https://www.papajohns.com/company/nutritional-details/index.html"
+                "https://artsology.com/sandpainting-game2.php"
+            ];
+
+            // Generate a random index from the websites array
+            var randomIndex = Math.floor(Math.random() * websites.length);
+
+            // Redirect to the randomly chosen website
+            window.location.href = websites[randomIndex];
+        }
+    </script>
   <style>
     .button {
   display: flex;
@@ -98,7 +128,7 @@
 
   </style>
 </body>
-<button class="button">
+<button class="button" onclick="goToRandomWebsite()">
   <span class="base"></span>
   <span class="red"></span>
 </button>
